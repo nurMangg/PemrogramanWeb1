@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <h2>Menulis html</h2>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = "HELLO JAVASCRIPT";
+    </script>
+
+    <h2>Contoh Popup</h2>
+    <script>
+        alert("Ini Merupakan pesan untuk anda");
+    </script>
+
+    <h2>Contoh Prompt</h2>
+    <script>
+        var nama = prompt("Siapa Nama Anda?")
+        alert("Hai, " + nama)
+        document.write("Hai, " + nama)
+    </script>
+
+    <h2>Contoh Form Interaktif</h2>
+    <script>
+        function cari() {
+            var kata = document.formcari.keyword.value;
+            var hasil = "https://www.google.com/search?q=" + kata;
+            window.open(hasil, 'google', config = 'height=500,width=750,scrollbars=yes location=yes')
+        }
+    </script>
+    <form name="formcari" onSubmit="cari()">Cari Pakai Google : <input name="keyword" size="40" type="text">
+        <input type="submit" value="cari!">
+    </form>
+
+    <h2>Contoh Validasi Data</h2>
+    <script>
+        function daftar() {
+            var nama = document.formdaftar.nama.value;
+            if (nama == "") {
+                alert("nama tidak boleh kosong");
+            }
+        }
+    </script>
+    <form name="formdaftar">
+        Nama :
+        <input name="nama" size="40" type="text">
+        <input type="submit" value="Daftar!" obClick="daftar()">
+    </form>
+</body>
+
+</html>
